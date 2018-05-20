@@ -1,9 +1,10 @@
+import Phaser from 'phaser';
 import logoImage from 'Assets/images/logo.png';
 
 export default class Main extends Phaser.Scene {
   constructor() {
     super({
-      key: 'Main'
+      key: 'Main',
     });
   }
 
@@ -12,7 +13,7 @@ export default class Main extends Phaser.Scene {
   }
 
   create() {
-    let logo = this.add.image(400, 150, 'logo');
+    const logo = this.add.image(400, 150, 'logo');
 
     this.tweens.add({
       targets: logo,
@@ -20,7 +21,7 @@ export default class Main extends Phaser.Scene {
       duration: 2000,
       ease: 'Power2',
       yoyo: true,
-      loop: -1
+      loop: -1,
     });
   }
 }

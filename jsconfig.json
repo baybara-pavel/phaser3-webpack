@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "target": "es2015",
+    "allowSyntheticDefaultImports": false,
+    "baseUrl": "./",
+    "paths": {
+      "Scenes/*": ["src/scenes/*"],
+      "Assets/*": ["src/assets/*"],
+      "Src/*": ["src/*"]
+    }
+  },
+  "exclude": ["node_modules", "dist"]
+}
