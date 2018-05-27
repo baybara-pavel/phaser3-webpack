@@ -14,11 +14,6 @@ module.exports = merge(commonConfig, {
   mode: 'development',
   devtool: 'cheap-module-source-map',
 
-  output: {
-    // Add /* filename */ comments to generated require()s in the output.
-    pathinfo: true,
-  },
-
   entry: [
     require.resolve('./polyfills'),
     // Include an alternative client for WebpackDevServer. A client's job is to
@@ -34,7 +29,12 @@ module.exports = merge(commonConfig, {
     require.resolve('react-dev-utils/webpackHotDevClient'),
     paths.appIndexJs,
   ],
-  
+
+  output: {
+    // Add /* filename */ comments to generated require()s in the output.
+    pathinfo: true,
+  },
+
   module: {
     rules: [
       {
@@ -53,7 +53,7 @@ module.exports = merge(commonConfig, {
             },
           },
           {
-            test: /\.(js|jsx|mjs)$/,
+            test: /\.(js|mjs)$/,
             include: paths.appSrc,
             loader: require.resolve('babel-loader'),
             options: {
@@ -66,7 +66,7 @@ module.exports = merge(commonConfig, {
           // This loader doesn't use a 'test' so it will catch all modules
           // that fall through the other loaders.
           {
-            exclude: [/\.(js|jsx|mjs)$/, /\.(html|ejs)$/, /\.json$/],
+            exclude: [/\.(js|mjs)$/, /\.(html|ejs)$/, /\.json$/],
             loader: require.resolve('file-loader'),
             options: {
               name: 'static/media/[name].[hash:8].[ext]',
@@ -78,6 +78,7 @@ module.exports = merge(commonConfig, {
       // Make sure to add the new loader(s) before the 'file' loader.
     ],
   },
+
   plugins: [
     // Generates an `index.html` file with the <script> injected.
     // Add module names to factory functions so they appear in browser profiler.
@@ -105,6 +106,7 @@ module.exports = merge(commonConfig, {
     // See https://github.com/facebookincubator/create-react-app/issues/240
     new CaseSensitivePathsPlugin(),
   ],
+
   performance: {
     hints: false,
   },

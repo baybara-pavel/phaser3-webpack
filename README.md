@@ -1,6 +1,6 @@
 # Phaser 3 + Webpack 4
 
-Start game development with Phaser + Webpack.
+A boilerplate project for start game development with Phaser 3 + Webpack 4
 
 ## Install and run
 
