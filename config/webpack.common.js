@@ -19,8 +19,7 @@ const env = getClientEnvironment(publicUrl);
 module.exports = {
   output: {
     filename: 'static/js/[name].js',
-    pathinfo: true,
-    path: path.resolve(__dirname, 'dist'),
+    path: path.resolve(__dirname, '../dist'),
     publicPath,
     // Point sourcemap entries to original disk location (format as URL on Windows)
     devtoolModuleFilenameTemplate: info =>
@@ -76,10 +75,12 @@ module.exports = {
   },
 
   plugins: [
-    new webpack.DefinePlugin({
-      CANVAS_RENDERER: JSON.stringify(true),
-      WEBGL_RENDERER: JSON.stringify(true),
-    }),
+    new webpack.DefinePlugin(
+      Object.assign(env.stringified, {
+        CANVAS_RENDERER: JSON.stringify(true),
+        WEBGL_RENDERER: JSON.stringify(true),
+      })
+    ),
   ],
 
   node: {

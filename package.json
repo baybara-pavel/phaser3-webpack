@@ -1,6 +1,5 @@
 {
   "name": "phaser3-webpack",
-  "version": "1.0.0",
   "description": "",
   "main": "src/index.js",
   "lint-staged": {
@@ -12,7 +11,7 @@
   "scripts": {
     "precommit": "lint-staged",
     "start": "node scripts/start.js",
-    "build": "webpack",
+    "build": "node scripts/build.js",
     "test": "eslint --ext=js"
   },
   "author": "",

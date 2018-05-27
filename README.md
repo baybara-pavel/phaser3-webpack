@@ -8,13 +8,7 @@ Start game development with Phaser + Webpack.
 | -------------------- | ------------------------------------------------------ |
 | `npm install`        | Install dependencies                                   |
 | `npm start`          | Build app and launch browser                           |
-
-## TODO
-
-- [ ] + Production build
-- [ ] + TS
-- [ ] + Cordova
-- [ ] + Stats
+| `npm run build`      | Build production ready app                             |
 
 ## License
 
