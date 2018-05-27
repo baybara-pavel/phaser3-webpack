@@ -9,5 +9,8 @@
       "Src/*": ["src/*"]
     }
   },
+  "files": [
+    "node_modules/phaser3-docs/typescript/phaser.d.ts",
+  ],
   "exclude": ["node_modules", "dist"]
 }

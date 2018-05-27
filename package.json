@@ -46,6 +46,7 @@
     "file-loader": "^1.1.11",
     "html-webpack-plugin": "^3.2.0",
     "lint-staged": "^7.1.1",
+    "phaser3-docs": "git+ssh://git@github.com/photonstorm/phaser3-docs.git",
     "react-dev-utils": "^5.0.1",
     "sw-precache-webpack-plugin": "^0.11.5",
     "uglifyjs-webpack-plugin": "^1.2.5",
